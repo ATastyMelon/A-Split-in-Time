@@ -8,7 +8,7 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "A Split in Time PRE-ALPHA TESTING");
+    InitWindow(screenWidth, screenHeight, "A Crack in Time PRE-ALPHA TESTING");
     
     Image image = LoadImage("resources/logo.png");
     SetWindowIcon(image);
@@ -60,7 +60,7 @@ int main(void)
             ClearBackground(BLACK);
 
             sprite.Draw(cursor, mousePoint, 0, 0.2f, SKYBLUE);
-            DrawText("A Split in Time DEBUGMODE", 0, screenHeight - 15, 15, LIME);
+            DrawText("A Crack in Time DEBUGMODE", 0, screenHeight - 15, 15, LIME);
 
             EndDrawing();
         } else {
@@ -72,11 +72,20 @@ int main(void)
 
             BeginDrawing();
             ClearBackground(BLACK);
+            DrawText("A Crack in Time", 0, 0, 30, WHITE);
+            DrawText("Main Menu", 0, 35, 25, WHITE);
+
+            DrawText("Press SPACE to Play", 0, (screenHeight/2) - 30, 30, WHITE);
+            DrawText("Press ESCAPE to close", 0, screenHeight/2, 30, WHITE);
 
             sprite.Draw(cursor, mousePoint, 0, 0.2f, SKYBLUE);
-            DrawText("A Split in Time PRE-ALPHA TESTING", 0, screenHeight - 15, 15, LIME);
+            DrawText("A Crack in Time PRE-ALPHA TESTING", 0, screenHeight - 15, 15, LIME);
 
             EndDrawing();
+            
+            if (IsKeyPressed(KEY_SPACE)) {
+                
+            }
         }
     }
     
