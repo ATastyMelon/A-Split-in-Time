@@ -1,0 +1,4 @@
+.vscode/
+.git/
+Makefile
+raylib.h
