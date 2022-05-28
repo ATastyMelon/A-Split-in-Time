@@ -37,11 +37,13 @@ int main(void)
         mousePoint = GetMousePosition();
         
         if (titleScreen) {
+            // Goto title
             if (splashTimer > 220) {
                 
                 titleScreen = false;
 
             } else {
+                // Countdown for splash
                 if (!playedSplash) {
                     BeginDrawing();
                     ClearBackground(BLACK);
@@ -52,7 +54,8 @@ int main(void)
                     splashTimer += 1;
                 }
             }
-        } 
+        }
+        // Debug mode
         else if (isDebug) {
             HideCursor();
 
@@ -63,7 +66,9 @@ int main(void)
             DrawText("A Crack in Time DEBUGMODE", 0, screenHeight - 15, 15, LIME);
 
             EndDrawing();
-        } else {
+        }
+        // Game
+        else {
             HideCursor();
             
             if (IsKeyPressed(KEY_ENTER)) {
